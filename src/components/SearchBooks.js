@@ -1,11 +1,12 @@
 import React from 'react';
+import FormattedBook from './FormattedBook.js';
 
 class SearchBooks extends React.Component {
   constructor(props){
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.searchAuthor = this.searchBooks.bind(this);
+    this.searchBook = this.searchBook.bind(this);
 
 
     this.state = {
@@ -24,11 +25,17 @@ class SearchBooks extends React.Component {
     let book = this.state.bookField;
     this.searchBook(book);
   }
-}
+};
 
   searchBook(book) {
     // write fetch thing here
-  }
+    var div = document.getElementById('booklist');
+    for (var title in this.books) {
+      if (title.title = book) {
+        div.innerHTML=<FormattedBook book={title} />
+      }
+    }
+  };
 
   render() {
     <div>
@@ -37,5 +44,7 @@ class SearchBooks extends React.Component {
         <input type="submit" />
       </form>
     </div>
-  }
+  };
 }
+
+exports.default(SearchBooks);
