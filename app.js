@@ -6,8 +6,6 @@ const bodyParser = require('body-parser');
 const path = require('path');
 var book = require('./models/book.js');
 
-
-
 var indexRouter = require('./routes/index');
 
 // set up mongoose connection
@@ -36,9 +34,17 @@ const router = express.Router();
 const controllers = require('./controllers/index.js');
 
 
+// Figure out why I can't use a separate router page
+
 app.get('/', (req, res) => {
   console.log('request received');
-  res.end();
+  // controllers.getAll()
+  // .then((data) => {
+  //   res.send(data)
+  // })
+  // .catch((err) => {
+  //   res.sendStatus(400)
+  // });
 });
 
 

@@ -3,41 +3,43 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import jQuery from 'jQuery';
 import axios from 'axios';
+import {sampleBooks} from './components/sampleData.js';
+import DisplayBooks from './components/DisplayBooks.js';
 
 const rootElement = document.getElementById('react-app');
 
 class App extends React.Component{
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      books: sampleBooks,
+    };
   }
 
-  // seeBooks() {
 
-
-  //   // request here
-  // },
-
-  componentDidMount() {
-  //   // axios.get('http://localhost:9000/books')
-  //   // .then(function (response) {
-  //   //   console.log(response);
-  //   // };
-    this.getData();
-  }
+//  componentDidMount() {
+//     // const response = await fetch('http://localhost:9000');
+//     // const data = await response.json();
+//     // console.log(data);
+//   //   // axios.get('http://localhost:9000/books')
+//   //   // .then(function (response) {
+//   //   //   console.log(response);
+//   //   // };
+//     this.getData();
+//   }
 
   // renderBooks() {
   //   axios.get('http://localhost:9000/books')
   //   .then(result => console.log('result = ', result))
   // }
 
-  getData() {
-    console.log('getData running')
-    fetch('http://localhost:9000/', {
-      method: 'GET'
-    })
-      .then(response => console.log(response))
-  }
+  // getData() {
+  //   console.log('getData running')
+  //   fetch('http://localhost:9000/', {
+  //     method: 'GET'
+  //   })
+  //     .then(response => console.log(response))
+  // }
 
 
   // getData() {
@@ -55,6 +57,14 @@ class App extends React.Component{
       <div>
       <div>
         <h1>BookWyrm Digital Bookshelf</h1>
+      </div>
+      <div id="booklist">
+        <h4>Your Recent Books: </h4>
+        <DisplayBooks books={this.state.books} />
+      </div>
+      <div>
+        <button>Find Book by Title</button>
+        <button>Find Books by Author</button>
       </div>
     </div>
     )

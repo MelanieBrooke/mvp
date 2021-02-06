@@ -3,7 +3,12 @@ import React from 'react';
 class AddBook extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      title = '',
+      authorFirst = '',
+      authorLast = '',
+      format = ''
+    }
   }
 }
 

@@ -15,6 +15,9 @@ module.exports = {
       use: ['babel-loader']
     }]
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   devServer: {
     contentBase:  path.resolve(__dirname, 'dist'),
     port: 9000

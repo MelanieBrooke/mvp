@@ -10,17 +10,16 @@ db.once('open', function() {
   console.log('connection open');
 });
 
+var bookArr = [];
 
-var getAll = function() {MongoClient.connect(dbURL, { useUnifiedTopology: true },function(err, db) {
+MongoClient.connect(dbURL, { useUnifiedTopology: true }, function(err, db) {
   if (err) throw err;
   var dbo = db.db("bookwyrm");
-  var bookArr = [];
   var collection = dbo.collection("bookCollection").find();
   collection.forEach(function(book) {
     bookArr.push(book);
   });
-  return bookArr;
-});
-};
-
-console.log(getAll());
+  // return bookArr;
+  // console.log('hey');
+  // return 'hi';
+})

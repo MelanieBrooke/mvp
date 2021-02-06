@@ -1,10 +1,10 @@
 import React from 'react';
-import FormattedBook from './FormattedBook.jsx';
+import FormattedBook from './FormattedBook.js';
 
 const DisplayBooks = (props) => (
   <div id="searchResults">
     <ul>
-      {props.bookResults.map(book =>
+      {props.books.map(book =>
         <FormattedBook book={book}/>)}
     </ul>
   </div>
