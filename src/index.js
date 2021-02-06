@@ -69,7 +69,7 @@ class App extends React.Component{
     return (
       <div>
       <div>
-        <h1>BookWyrm Digital Bookshelf</h1>
+        {/* <h1>BookWyrm Digital Bookshelf</h1> */}
         {/* <h3>Coming soon:</h3>
         <p>Search your library by title or author</p>
         <p>Organize your books into series</p>
