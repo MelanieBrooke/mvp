@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/MelanieBrooke/rpt26-mvp#readme",
   "dependencies": {
+    "axios": "^0.21.1",
+    "jquery": "^3.5.1",
     "mongo": "^0.1.0",
     "mongodb": "^3.6.3",
     "mongoose": "^5.11.15",

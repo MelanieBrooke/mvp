@@ -39,7 +39,11 @@ function bookCreate(title, authorLast, authorFirst, format) {
 
 
 
-bookCreate('Pride and Prejudice', 'Austen', 'Jane', 'harcover');
+// bookCreate('Pride and Prejudice', 'Austen', 'Jane', 'harcover');
+
+// bookCreate('The Hunger Games', "Collins", "Suzanne", "hardcover");
+
+// bookCreate('The Phantom of the Opera', 'Leroux', 'Gaston', 'paperback');
 
 // mongoose.connection.close();
 

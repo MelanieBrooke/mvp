@@ -7,6 +7,7 @@ const path = require('path');
 var book = require('./models/book.js');
 
 
+
 var indexRouter = require('./routes/index');
 
 // set up mongoose connection
@@ -23,12 +24,22 @@ db.on('error', console.error.bind(console, 'MongoDB connection error: '));
 app.use(express.static('./dist'));
 
 app.use(bodyParser.urlencoded({extended: true}));
-// app.use(bodyParser.json());
 
-// app.use('/', indexRouter);
+// app.use(indexRouter);
 
 app.listen(port, () => {
   console.log(`listening at http://localhost:${port}`);
 })
+
+
+const router = express.Router();
+const controllers = require('./controllers/index.js');
+
+
+app.get('/', (req, res) => {
+  console.log('request received');
+  res.end();
+});
+
 
 module.exports = app;
